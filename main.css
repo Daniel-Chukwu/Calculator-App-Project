@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #0c205a;
+}
+
+.calculator {
+  background-color: #e8ecef;
+  width: 100%;
+  max-width: 375px;
+  min-height: 640px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+/* Display Styling */
+.display {
+  background-color: #3f424a;
+  border-radius: 20px;
+  margin: 0.8rem 0.8rem 0 0.8rem;
+  min-height: 100px;
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  color: white;
+  text-align: right;
+  flex: 1 1 0%;
+}
+
+.display .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 100%;
+  overflow: auto;
+}
+
+.display .input {
+  width: 100%;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.display .output {
+  font-size: 3rem;
+  font-weight: 700;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.display .operator {
+  color: #eb6666;
+}
+
+.display .brackets,
+.display .percent {
+  color: #26fed7;
+}
+
+/* Keys Styling */
+.keys {
+  background: transparent;
+  margin: 0.8rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 1rem;
+}
+
+.keys .key {
+  position: relative;
+  cursor: pointer;
+  display: block;
+  height: 20px;
+  padding-top: 100%;
+  background-color: #262933;
+  border-radius: 1rem;
+  transition: 0.2s;
+  user-select: none;
+}
+
+.keys .key span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.keys .key:hover {
+  transform: scale(0.95);
+  background: #464c60;
+}
+
+.keys .key.operator span {
+  color: #eb6666;
+}
+
+.keys .key.action span {
+  color: #26fed7;
+}
